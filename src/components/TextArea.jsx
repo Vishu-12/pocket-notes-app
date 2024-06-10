@@ -24,47 +24,18 @@ export default function TextArea({ todos, setTodos, noteIdx }) {
     setTextareaValue("");
   }
   return (
-    <div
-      style={{
-        bottom: "0",
-        position: "fixed",
-        background: "white",
-        width: "75%",
-        height: "20%",
-        border: "1rem solid #E8E8E8",
-        borderRadius: "1rem",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          height: "78%",
-          padding: "1rem",
-          border: "none",
-          borderRadius: "1rem",
-        }}
-      >
+    <div className="bottom-0 fixed bg-white w-4/5 h-1/5 border-8 border-solid border-[#E8E8E8] rounded-2xl">
+      <div className="w-full h-full p-4 border-none rounded-2xl">
         <textarea
           name=""
           id=""
-          style={{
-            width: "98%",
-            height: "78%",
-            fontSize: "1.4rem",
-            resize: "none",
-            border: "none",
-            outline: "none",
-          }}
+          className="w-full h-full text-2xl resize-none border-none outline-none"
           value={textareaValue}
           onChange={handleChange}
           placeholder="Enter your text here..........."
         ></textarea>
-        <div onClick={handleSubmit}>
-          <img
-            src={arrow}
-            alt=""
-            style={{ float: "right", marginRight: "2rem" }}
-          />
+        <div onClick={handleSubmit} className="bottom-4 fixed right-4">
+          <img src={arrow} alt="" />
         </div>
       </div>
     </div>
