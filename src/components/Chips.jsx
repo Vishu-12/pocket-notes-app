@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Chips({ todos, setOpen, noteId }) {
-  
   return (
     <div
       style={{
@@ -17,9 +16,14 @@ export default function Chips({ todos, setOpen, noteId }) {
     >
       {todos?.map((todosItem) => (
         <div
-        key={todosItem.id}
-          style={{ display: "flex", marginTop: "2rem", cursor: "pointer", backgroundColor: noteId == todosItem.id && "#F7ECDC" }}
-          onClick={(e)=>setOpen(todosItem.id)}
+          key={todosItem.id}
+          style={{
+            display: "flex",
+            marginTop: "2rem",
+            cursor: "pointer",
+            backgroundColor: noteId == todosItem.id && "#F7ECDC",
+          }}
+          onClick={(e) => setOpen(todosItem.id)}
         >
           <div
             style={{

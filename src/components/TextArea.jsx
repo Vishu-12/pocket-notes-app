@@ -9,16 +9,16 @@ export default function TextArea({ todos, setTodos, noteIdx }) {
   function handleSubmit(e) {
     e.preventDefault();
     const now = new Date();
-  const currentTime = now.toLocaleTimeString("en-US");
-  const currentDate = now.toLocaleDateString(undefined);
-    const _newNotes = [...todos]
-    _newNotes?.[noteIdx]?.['notes']?.push({
-      "id": Math.floor(Math.random()*90000) + 10000,
-      "time": currentTime,
-      "date": currentDate,
-      "text": textareaValue
-    })
-    localStorage.setItem('notes', JSON.stringify(_newNotes))
+    const currentTime = now.toLocaleTimeString("en-US");
+    const currentDate = now.toLocaleDateString(undefined);
+    const _newNotes = [...todos];
+    _newNotes?.[noteIdx]?.["notes"]?.push({
+      id: Math.floor(Math.random() * 90000) + 10000,
+      time: currentTime,
+      date: currentDate,
+      text: textareaValue,
+    });
+    localStorage.setItem("notes", JSON.stringify(_newNotes));
     setTodos(_newNotes);
 
     setTextareaValue("");
@@ -39,7 +39,6 @@ export default function TextArea({ todos, setTodos, noteIdx }) {
         style={{
           width: "100%",
           height: "78%",
-
           padding: "1rem",
           border: "none",
           borderRadius: "1rem",
