@@ -49,14 +49,14 @@ export default function NewGroupPopup({
           }}
         >
           <div>
-            <h2>Create New Notes group</h2>
+            <h1 className="text-xl font-bold mb-4">Create New Notes group</h1>
             <div>
-              <label htmlFor="" className="text-lg mr-4">
+              <label htmlFor="" className="text-lg mr-7 font-semibold mb-6">
                 Group Name
               </label>
 
               <input
-                className="p-1 w-[3/5] rounded-xl border-solid border-2 border-gray-700"
+                className="py-1 px-4 w-1/2 rounded-xl border-solid border-2 border-gray-700 mb-6"
                 type="text"
                 name=""
                 id=""
@@ -66,7 +66,7 @@ export default function NewGroupPopup({
               />
             </div>
             <div className="flex items-center">
-              <label htmlFor="" className="text-lg mr-4">
+              <label htmlFor="" className="text-lg mr-7 font-semibold">
                 Choose colour
               </label>
               <input
@@ -75,9 +75,9 @@ export default function NewGroupPopup({
                 name=""
                 value={inputColor}
                 onClick={() => setInputColor("#B38BFA")}
-                className={`opacity-${
-                  inputColor == "#B38BFA" ? "100" : "20"
-                } mr-3 appearance-none border-solid border-4 rounded-2xl  border-[#B38BFA]`}
+                style={{ opacity: `${inputColor == "#B38BFA" ? "1" : ".2"}` }}
+                className={`
+                 mr-3 appearance-none border-solid border-8 size-6 rounded-2xl border-[#B38BFA] bg-[#B38BFA]`}
               />
               <input
                 id="colorBtn"
@@ -85,9 +85,8 @@ export default function NewGroupPopup({
                 name=""
                 value={inputColor}
                 onClick={() => setInputColor("#FF79F2")}
-                className={`opacity-${
-                  inputColor == "#FF79F2" ? "100" : "20"
-                } mr-3 appearance-none border-solid border-4 rounded-2xl  border-[#FF79F2]`}
+                style={{ opacity: `${inputColor == "#FF79F2" ? "1" : ".2"}` }}
+                className={` mr-3 appearance-none border-solid border-8 size-6 rounded-2xl  border-[#FF79F2] bg-[#FF79F2]`}
               />
               <input
                 id="colorBtn"
@@ -95,9 +94,8 @@ export default function NewGroupPopup({
                 name=""
                 value={inputColor}
                 onClick={() => setInputColor("#F19576")}
-                className={`opacity-${
-                  inputColor == "#43E6FC" ? "100" : "20"
-                } mr-3 appearance-none border-solid border-4 rounded-2xl  border-[#43E6FC]`}
+                style={{ opacity: `${inputColor == "#F19576" ? "1" : ".2"}` }}
+                className={` mr-3 appearance-none border-solid border-8 size-6 rounded-2xl  border-[#43E6FC] bg-[#43E6FC]`}
               />
               <input
                 id="colorBtn"
@@ -105,9 +103,9 @@ export default function NewGroupPopup({
                 name=""
                 value={inputColor}
                 onClick={() => setInputColor("#F19576")}
-                className={`opacity-${
-                  inputColor == "#F19576" ? "100" : "20"
-                } mr-3 appearance-none border-solid border-4 rounded-2xl  border-[#F19576]`}
+                style={{ opacity: `${inputColor == "#F19576" ? "1" : ".2"}` }}
+                className={`
+                 mr-3 appearance-none border-solid border-8 size-6 rounded-2xl  border-[#F19576] bg-[#F19576]`}
               />
               <input
                 id="colorBtn"
@@ -115,9 +113,9 @@ export default function NewGroupPopup({
                 name=""
                 value={inputColor}
                 onClick={() => setInputColor("#0047FF")}
-                className={`opacity-${
-                  inputColor == "#0047FF" ? "100" : "20"
-                } mr-3 appearance-none border-solid border-4 rounded-2xl  border-[#0047FF]`}
+                style={{ opacity: `${inputColor == "#0047FF" ? "1" : ".2"}` }}
+                className={`
+                 mr-3 appearance-none border-solid border-8 size-6 rounded-2xl  border-[#0047FF] bg-[#0047FF]`}
               />
               <input
                 id="colorBtn"
@@ -125,9 +123,9 @@ export default function NewGroupPopup({
                 name=""
                 value={inputColor}
                 onClick={() => setInputColor("#6691FF")}
-                className={`opacity-${
-                  inputColor == "#6691FF" ? "100" : "20"
-                } mr-3 appearance-none border-solid border-4 rounded-2xl  border-[#6691FF]`}
+                style={{ opacity: `${inputColor == "#6691FF" ? "1" : ".2"}` }}
+                className={`
+                 mr-3 appearance-none border-solid border-8 size-6 rounded-2xl  border-[#6691FF] bg-[#6691FF]`}
                 // style={{
                 //   opacity: inputColor == "#6691FF" ? 1 : 0.3,
                 //   marginRight: ".6rem",
@@ -139,7 +137,7 @@ export default function NewGroupPopup({
             </div>
           </div>
           <button
-            className="bg-black text-white py-2 px-8 border-none rounded-sm float-right"
+            className="bg-black text-white py-1 px-8 border-none rounded-lg float-right "
             onClick={handleSubmit}
           >
             Create

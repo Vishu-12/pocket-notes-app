@@ -8,12 +8,12 @@ export default function SideBar({ setOpen, notes, setNotes, noteId }) {
   return (
     <div className="p-5 bg-white w-1/5 h-full fixed overflow-x-hidden basis-1/5">
       <div>
-        <h2>Pocket Notes</h2>
+        <h2 className="font-bold text-2xl">Pocket Notes</h2>
         <button
-          className="mt-5 p-3 rounded-xl border-none flex justify-center items-center text-sm bg-black text-white"
+          className="mt-5 p-3 px-5 rounded-full border-none flex justify-center items-center text-lg bg-black text-white"
           onClick={() => setOpenPopup(true)}
         >
-          <GrAdd className="mr-1" />
+          <GrAdd className="mr-2" />
           Create Notes group
         </button>
         <NewGroupPopup
