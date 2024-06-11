@@ -18,25 +18,18 @@ export default function Chips({ todos, setOpen, noteId }) {
       {todos?.map((todosItem) => (
         <div
           key={todosItem.id}
-          className={`flex mt-8 cursor-pointer bg-${
-            noteId == todosItem.id && "#F7ECDC"
+          className={`flex mt-8 cursor-pointer p-2 rounded-lg
           }`}
-          // style={{
-          //   display: "flex",
-          //   marginTop: "2rem",
-          //   cursor: "pointer",
-          //   backgroundColor: noteId == todosItem.id && "#F7ECDC",
-          // }}
+          style={{
+            backgroundColor: noteId == todosItem.id && "#F7ECDC",
+          }}
           onClick={(e) => setOpen(todosItem.id)}
         >
           <div
-            className={`p-3 rounded-full bg-${todosItem?.color} text-white `}
-            // style={{
-            //   padding: ".7rem .7rem",
-            //   borderRadius: "50%",
-            //   backgroundColor: `${todosItem.color}`,
-            //   color: "white",
-            // }}
+            className={`p-3 rounded-full text-white `}
+            style={{
+              backgroundColor: `${todosItem.color}`,
+            }}
           >
             {todosItem.shortName}
           </div>
