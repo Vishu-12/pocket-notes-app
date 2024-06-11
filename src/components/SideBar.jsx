@@ -6,7 +6,7 @@ import NewGroupPopup from "./NewGroupPopup";
 export default function SideBar({ setOpen, notes, setNotes, noteId }) {
   const [openPopup, setOpenPopup] = useState(false);
   return (
-    <div className="p-5 bg-white w-1/5 h-full fixed overflow-x-hidden basis-1/5">
+    <div className="p-5 bg-white sm:w-full md:w-1/5 h-full fixed overflow-x-hidden basis-1/5">
       <div>
         <h2 className="font-bold text-2xl">Pocket Notes</h2>
         <button

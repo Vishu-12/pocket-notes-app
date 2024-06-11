@@ -3,14 +3,8 @@ import React from "react";
 export default function Chips({ todos, setOpen, noteId }) {
   return (
     <div
-      className="fixed left-8 top-28 h-full overflow-x-scroll w-1/5 "
+      className="fixed left-8 top-28 sm:h-screen md:h-full overflow-x-scroll sm:w-full md:w-1/5 "
       style={{
-        // position: "fixed",
-        // left: "2rem",
-        // top: "7rem",
-        // height: "83vh",
-        // overflowX: "scroll",
-        // width: "20%",
         msOverflowStyle: "none",
         scrollbarWidth: "none",
       }}

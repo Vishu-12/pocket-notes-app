@@ -20,7 +20,7 @@ export default function Notes() {
   }, []);
 
   return (
-    <div className="flex bg-[#F7ECDC] w-screen h-screen">
+    <div className="sm:flex sm:flex-col md:flex md:flex-row bg-[#F7ECDC] w-screen h-screen">
       <SideBar
         setOpen={setOpen}
         notes={notes}

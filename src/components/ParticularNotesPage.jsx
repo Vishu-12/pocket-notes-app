@@ -6,7 +6,7 @@ import TextArea from "./TextArea";
 export default function ParticularNotesPage({ notes, noteId, setNotes }) {
   return (
     <div
-      className="ml-auto h-screen w-4/5 flex flex-col"
+      className="ml-auto h-screen w-4/5 flex-col sm:hidden md:flex"
       // style={{
       //   // height: "80vh",
       //   width: "75%",

@@ -38,10 +38,10 @@ export default function NewGroupPopup({
     onClose(false);
   }
   return (
-    <div className="flex justify-center w-screen">
+    <div className="flex justify-center w-screen sm:bg-[Gray]">
       {open && (
         <div
-          className="w-2/5 p-5 fixed bg-white rounded-xs leading-10"
+          className=" sm:w-full md:w-2/5 p-5 fixed bg-white rounded-xs leading-10 "
           onBlur={(e) => {
             if (!e.currentTarget.contains(e.relatedTarget)) {
               onClose(false);
