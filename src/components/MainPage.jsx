@@ -3,8 +3,11 @@ import heroImage from "/assets/heroImage.png";
 import { IoMdLock } from "react-icons/io";
 export default function MainPage() {
   return (
-    <div className="sm:hidden md:flex ml-40 h-screen w-4/5 items-center justify-center ">
-      <div style={{ width: "50%" }}>
+    <div
+      className="sm:hidden sm:invisible md:visible md:flex sm:ml-0 md:ml-40 sm:h-2 md:h-screen w-4/5 items-center justify-center sm:overflow-hidden"
+      id="mainPage"
+    >
+      <div className="w-1/2">
         <img src={heroImage} alt="" />
         <div className="flex justify-center">
           <div className="text-center w-3/5">
@@ -16,7 +19,7 @@ export default function MainPage() {
           </div>
         </div>
       </div>
-      <p className="bottom-9 fixed md:flex items-center sm:invisible">
+      <p className="bottom-9 md:fixed sm:hidden md:flex items-center sm:invisible md:visible">
         <IoMdLock className="sm:invisible" />
         end-to-end encrypted
       </p>
